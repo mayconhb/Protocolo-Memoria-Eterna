@@ -160,12 +160,37 @@ export const BONUSES: Product[] = [
     duration: 'Guía Avanzada',
     guideDetails: [
       {
-        title: "La Conexión Intestino-Cerebro",
+        title: "Fase 1: El Protocolo de Restauración (Días 1-7)",
         blocks: [
-          { type: 'text', content: "Científicamente se conoce al intestino como el 'segundo cerebro' debido a la red de más de 100 millones de neuronas que lo recubren." },
-          { type: 'subtitle', title: "1. Protocolo de Eliminación" },
-          { type: 'list', items: ["Gluten Moderno", "Lácteos A1", "Aceites Refinados", "Azúcar Blanca"] },
-          { type: 'recipe_card', title: "Super-Kéfir", content: "Fermentar 24h nódulos de kéfir con agua y azúcar mascabo." }
+          { type: 'text', content: "El primer paso para sanar el intestino es eliminar los agresores que perforan la pared intestinal y alimentan a las bacterias patógenas. Esta fase se centra en desinflamar y 'limpiar el terreno'." },
+          { type: 'subtitle', title: "1. Alimentos Prohibidos (Eliminación Total)" },
+          { type: 'list', items: [
+            "Gluten: Trigo, cebada, centeno (causan zonulina y permeabilidad).",
+            "Azúcar refinada: Alimenta el sobrecrecimiento de Cándida.",
+            "Aceites de semillas (Canola, Girasol, Soja): Altamente inflamatorios.",
+            "Lácteos de vaca comerciales: La caseína A1 es difícil de digerir."
+          ]},
+          { type: 'subtitle', title: "2. La Bebida Maestra de Limpieza" },
+          { type: 'recipe_card', title: "Agua de Chía y Limón (Mucílago Sanador)", content: "Ingredientes: 1 cucharada de chía, 1 vaso de agua, zumo de medio limón.\n\nPreparación: Dejar la chía en agua por 30 min hasta que suelte el mucílago. Añadir el limón. Tomar en ayunas para 'barrer' toxinas y proteger la mucosa." }
+        ]
+      },
+      {
+        title: "Fase 2: Sellado y Re-Población (Días 8-21)",
+        blocks: [
+          { type: 'text', content: "Una vez desinflamado, procedemos a sellar las uniones estrechas del intestino y reintroducir bacterias beneficiosas." },
+          { type: 'subtitle', title: "1. Caldo de Huesos (El Pegamento Intestinal)" },
+          { type: 'text', content: "Rico en colágeno, glutamina y glicina, es esencial para reparar el tejido intestinal dañado." },
+          { type: 'recipe_card', title: "Caldo de Huesos Ancestral", content: "Ingredientes: 1kg de huesos de res o pollo (con cartílago), 2 cdas de vinagre de manzana, agua.\n\nPreparación: Cocinar a fuego muy lento por 12-24 horas. El vinagre ayuda a extraer los minerales. Tomar una taza tibia cada noche." },
+          { type: 'subtitle', title: "2. Probióticos Vivos" },
+          { type: 'recipe_card', title: "Chucrut Casero (Poder Probiótico)", content: "Ingredientes: Repollo blanco, sal marina (2% del peso del repollo).\n\nPreparación: Picar fino, masajear con sal hasta que suelte líquido. Prensar en frasco de vidrio cubierto por su propio jugo. Fermentar 7-10 días a temperatura ambiente. 1 cda diaria." }
+        ]
+      },
+      {
+        title: "Fase 3: Mantenimiento y Conexión Cerebro-Intestino",
+        blocks: [
+          { type: 'text', content: "El 90% de la serotonina (hormona de la felicidad) se produce en el intestino. Un intestino sano equivale a una mente clara y enfocada." },
+          { type: 'tip', title: "El Truco de la Masticación", content: "Mastica cada bocado 30 veces. La digestión comienza en la boca con la amilasa salival. Esto reduce la carga de trabajo del intestino y previene la fermentación." },
+          { type: 'recipe_card', title: "Té de Jengibre y Cúrcuma (Antiinflamatorio)", content: "Ingredientes: 1 trozo de jengibre fresco, 1 pizca de cúrcuma, pimienta negra, 250ml agua.\n\nPreparación: Hervir 5 min. La pimienta activa la curcumina. Ideal para después de las comidas." }
         ]
       }
     ]
