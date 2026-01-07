@@ -75,7 +75,8 @@ const VideoSession: React.FC<{ block: GuideBlock }> = ({ block }) => {
     <div className="flex flex-col items-center mb-8 animate-fade-in">
       {/* Circular Video Container */}
       <div className="relative w-64 h-64 sm:w-72 sm:h-72 mb-8 group">
-        <div className={`absolute inset-0 rounded-full bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500 blur-xl opacity-20 transition-opacity duration-1000 ${isPlaying ? 'animate-pulse-slow opacity-40' : 'opacity-10'}`}></div>
+        <div className={`absolute inset-0 rounded-full bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500 blur-2xl transition-all duration-1000 ${isPlaying ? 'animate-pulse opacity-60 scale-110' : 'opacity-10 scale-100'}`}></div>
+        <div className={`absolute inset-0 rounded-full bg-indigo-400 blur-3xl transition-all duration-1000 ${isPlaying ? 'animate-pulse opacity-40 scale-125 delay-75' : 'opacity-0 scale-100'}`}></div>
         <div className="relative w-full h-full rounded-full border-4 border-slate-100/50 p-2 bg-white shadow-2xl overflow-hidden z-10">
           <div className="w-full h-full rounded-full overflow-hidden bg-slate-900 flex items-center justify-center">
             <video 
