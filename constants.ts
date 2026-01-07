@@ -51,22 +51,26 @@ export const BONUSES: Product[] = [
     category: 'Salud Intestinal',
     image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=2070&auto=format&fit=crop',
     isLocked: false,
-    description: 'Guía enfocada en la desinflamación del cuerpo a través del "segundo cerebro".',
-    duration: 'Guía',
+    description: 'Protocolo maestro para restaurar tu microbiota y eliminar la inflamación sistémica.',
+    duration: 'Guía Avanzada',
     guideDetails: [
       {
-        title: "El Segundo Cerebro",
+        title: "La Conexión Intestino-Cerebro",
         blocks: [
-          { type: 'text', content: "Tu intestino regula gran parte de tu sistema inmunológico y producción de neurotransmisores. Un intestino inflamado es la causa principal de la 'niebla mental'." },
-          { type: 'subtitle', title: "Protocolo de Desinflamación" },
+          { type: 'text', content: "Científicamente se conoce al intestino como el 'segundo cerebro' debido a la red de más de 100 millones de neuronas que lo recubren. Si tu intestino está inflamado, tu cerebro también lo estará, manifestándose como fatiga mental, falta de concentración y pérdida de memoria a corto plazo." },
+          { type: 'subtitle', title: "1. El Protocolo de Eliminación (14 Días)" },
+          { type: 'text', content: "Durante las próximas dos semanas, eliminaremos los 'Agresores Silenciosos' que perforan la pared intestinal:" },
           { type: 'list', items: [
-            "Ayuno intermitente ligero (12/12) para descanso digestivo.",
-            "Eliminación de aceites vegetales procesados por 14 días.",
-            "Consumo de caldos de huesos ricos en colágeno para sellar la pared intestinal."
+            "Gluten Moderno: Proteína altamente inflamatoria en trigos procesados.",
+            "Lácteos de A1: Sustituir por leche de coco, almendras o cabra.",
+            "Aceites de Semillas Refinados: Girasol, canola y soja (altos en Omega-6).",
+            "Azúcar Blanca: Alimento principal para las bacterias patógenas."
           ]},
-          { type: 'subtitle', title: "Probióticos Accesibles" },
-          { type: 'recipe_card', title: "Kéfir y Chucrut Casero", content: "Alimentos fermentados que puedes preparar en casa con repollo, agua y sal. Repueblan tu microbiota de forma económica." },
-          { type: 'warning', title: "Salud Cardiovascular", content: "Un intestino sano reduce la inflamación sistémica, protegiendo tus arterias y mejorando la circulación hacia el cerebro." }
+          { type: 'subtitle', title: "2. La Alquimia Probiótica Casera" },
+          { type: 'recipe_card', title: "Super-Kéfir de Agua", content: "Ingredientes: 1 litro de agua mineral, 3 cucharadas de nódulos de kéfir, 2 cucharadas de azúcar mascabo. Fermentar 24h a temperatura ambiente. Rico en más de 30 cepas de bacterias beneficiosas." },
+          { type: 'recipe_card', title: "Chucrut Terapéutico", content: "Ingredientes: Repollo morado y sal marina. Masajear el repollo hasta que suelte su jugo, compactar en frasco y dejar 10 días. Repuebla la microbiota instantáneamente." },
+          { type: 'subtitle', title: "3. Blindaje Cardiovascular" },
+          { type: 'text', content: "Un intestino sano evita que las endotoxinas entren al torrente sanguíneo. Esto reduce la rigidez arterial y protege tu corazón, asegurando que el flujo de oxígeno al cerebro sea óptimo y constante." }
         ]
       }
     ]
@@ -74,19 +78,23 @@ export const BONUSES: Product[] = [
   {
     id: 'b2',
     title: '101 Curas Herbales',
-    category: 'Remedios Naturales',
+    category: 'Farmacia Natural',
     image: 'https://images.unsplash.com/photo-1544787219-7f47ccb76574?q=80&w=1936&auto=format&fit=crop',
     isLocked: false,
-    description: 'Enciclopedia de remedios naturales y sustitutos caseros para una vida sin químicos.',
-    duration: 'Guía',
+    description: 'La enciclopedia definitiva de remedios ancestrales para recuperar tu salud sin químicos.',
+    duration: 'Enciclopedia Digital',
     guideDetails: [
       {
-        title: "Botica de la Tierra",
+        title: "Sustitutos Naturales Poderosos",
         blocks: [
-          { type: 'text', content: "Sustituye medicamentos comunes por soluciones que crecen en la tierra. Ingredientes fáciles de hallar en ferias y tiendas naturales." },
-          { type: 'recipe_card', title: "Presión Alta y Colesterol", content: "Té de Hibisco con Alpiste: 1 cda de cada uno en 500ml de agua. Tomar durante el día." },
-          { type: 'recipe_card', title: "Dores en Juntas (Artrite)", content: "Compresas de Jengibre y Romero: Infusión concentrada aplicada con paños tibios sobre la zona afectada." },
-          { type: 'recipe_card', title: "Baja Libido (Vigor Natural)", content: "Mezcla de Maca Peruana con Cacao puro. Tomar una cucharada por la mañana en tu bebida favorita." }
+          { type: 'text', content: "Aprende a utilizar las plantas no solo como condimentos, sino como medicina activa. Estos remedios han sido utilizados por milenios con eficacia comprobada." },
+          { type: 'subtitle', title: "Control de Presión y Colesterol" },
+          { type: 'recipe_card', title: "Infusión 'Arteria Limpia'", content: "Hervir 1 rama de canela, 1 cda de hojas de olivo y un puñado de barbas de maíz en 1 litro de agua. Tomar 2 tazas al día. El olivo actúa como un vasodilatador natural potente." },
+          { type: 'subtitle', title: "Protocolo para Artritis y Dolor Articular" },
+          { type: 'text', content: "La inflamación en las juntas suele ser el resultado de un exceso de ácido úrico y falta de lubricación sinovial." },
+          { type: 'recipe_card', title: "Shot de Oro Líquido", content: "Zumo de 1 limón, 1 cdita de jengibre fresco rallado, 1/2 cdita de cúrcuma y una pizca de pimienta negra. Tomar en ayunas para desinflamar las articulaciones." },
+          { type: 'subtitle', title: "Vigor y Libido (Energía Vital)" },
+          { type: 'recipe_card', title: "Elixir de Maca y Ginseng", content: "Mezclar 1 cdita de Maca Peruana negra con una pizca de Ginseng en polvo en tu café o batido matutino. Mejora el flujo sanguíneo y la resistencia física." }
         ]
       }
     ]
@@ -94,18 +102,20 @@ export const BONUSES: Product[] = [
   {
     id: 'b3',
     title: 'Memory Pulse',
-    category: 'Terapia Sonora',
+    category: 'Biohacking Sonoro',
     image: 'https://images.unsplash.com/photo-1519834785169-98be25ec3f84?q=80&w=1964&auto=format&fit=crop',
     isLocked: false,
-    description: 'Terapia sonora digital con frecuencias de Ondas Gama para activar el foco.',
-    duration: 'Audio (8 min)',
+    description: 'Entrenamiento cerebral mediante ondas gama para alcanzar niveles máximos de enfoque.',
+    duration: 'Terapia Binaural',
     guideDetails: [
       {
-        title: "Activación Neuronal",
+        title: "Ingeniería de Ondas Cerebrales",
         blocks: [
-          { type: 'text', content: "Este audio de 8 minutos utiliza frecuencias binaurales Gama (30Hz-100Hz) para sincronizar ambos hemisferios cerebrales." },
-          { type: 'tip', title: "Instrucción de Uso", content: "Escuchar por la mañana con auriculares. Ayuda a 'limpiar' la mente de residuos del sueño y activa el foco máximo para el resto del día." },
-          { type: 'recipe_card', title: "Pulso de la Memoria", content: "Archivo de audio digital: Sincronización de Ondas Gama para foco profundo." }
+          { type: 'text', content: "El estado de 'Foco Total' ocurre cuando el cerebro emite Ondas Gama (30-100Hz). Esta terapia sonora utiliza pulsos binaurales para 'arrastrar' tus neuronas a esta frecuencia de alto rendimiento." },
+          { type: 'subtitle', title: "Cómo funciona el Audio de 8 Minutos" },
+          { type: 'text', content: "El audio contiene frecuencias sutilmente diferentes en cada oído. Tu cerebro crea una tercera frecuencia interna (el pulso) que sincroniza ambos hemisferios cerebrales, eliminando la procrastinación." },
+          { type: 'tip', title: "El Ritual de la Mañana", content: "Siéntate en un lugar tranquilo, usa auriculares de buena calidad y cierra los ojos. Escucha el audio completo antes de empezar tu trabajo o estudio. Sentirás una claridad mental inmediata, como si se 'limpiara' el ruido residual de la noche." },
+          { type: 'recipe_card', title: "Frecuencia Maestra: 40Hz", content: "Estudios muestran que la frecuencia de 40Hz es clave para la consolidación de la memoria y la limpieza de placas beta-amiloides en el cerebro." }
         ]
       }
     ]
