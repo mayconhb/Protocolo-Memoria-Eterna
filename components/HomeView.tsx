@@ -3,7 +3,7 @@ import { Lock, ChevronRight } from 'lucide-react';
 import { PRODUCTS, BONUSES, LOCKED_CONTENT, MOTIVATIONAL_QUOTES } from '../constants';
 import { Product } from '../types';
 
-import bannerMemoria1 from '@assets/stock_images/abstract_glowing_bra_088b2437.jpg';
+import bannerMemoria1 from '@assets/stock_images/human_brain_glowing__a0d60dca.jpg';
 import bannerMemoria2 from '@assets/stock_images/meditation_mindfulne_ef6a38bc.jpg';
 
 interface HomeViewProps {
