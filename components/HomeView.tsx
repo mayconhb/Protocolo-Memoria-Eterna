@@ -3,8 +3,8 @@ import { Lock, ChevronRight } from 'lucide-react';
 import { PRODUCTS, BONUSES, LOCKED_CONTENT, MOTIVATIONAL_QUOTES } from '../constants';
 import { Product } from '../types';
 
-import bannerTransformacao from '@assets/generated_images/weight_loss_transformation_banner.png';
-import bannerEmagrecimento from '@assets/generated_images/mirror_reflection_weight_loss.png';
+import bannerMemoria1 from '@assets/stock_images/brain_memory_health__9a9c5781.jpg';
+import bannerMemoria2 from '@assets/stock_images/brain_memory_health__0fd4f5d7.jpg';
 
 interface HomeViewProps {
   onProductClick: (product: Product) => void;
@@ -63,8 +63,8 @@ export const HomeView: React.FC<HomeViewProps> = ({ onProductClick, onShowUpgrad
   const lockedScroll = useDraggableScroll();
 
   const banners = [
-    { id: 1, image: bannerTransformacao, title: "Transforma tu vida\nhoy mismo." },
-    { id: 2, image: bannerEmagrecimento, title: "Tu cuerpo merece\nlo mejor." }
+    { id: 1, image: bannerMemoria1, title: "Potencia tu Memoria\nProtocolo Eterno." },
+    { id: 2, image: bannerMemoria2, title: "Mente Clara y Fuerte\nNeuroplasticidad Total." }
   ];
 
   const handleBannerScroll = (e: React.UIEvent<HTMLDivElement>) => {
