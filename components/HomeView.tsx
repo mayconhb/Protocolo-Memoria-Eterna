@@ -198,39 +198,41 @@ export const HomeView: React.FC<HomeViewProps> = ({ onProductClick, onShowUpgrad
         </section>
 
         {/* Section: Locked */}
-        <section>
-          <div className="px-6 mb-4 flex items-center justify-between group cursor-pointer hover:opacity-80 transition-opacity">
-            <h3 className="text-xl font-bold text-slate-900">Contenidos Exclusivos</h3>
-            <ChevronRight size={24} className="text-slate-400" />
-          </div>
-          
-          <div 
-            ref={lockedScroll.ref}
-            {...lockedScroll.events}
-            className={`flex overflow-x-auto snap-x snap-mandatory no-scrollbar px-6 gap-4 pb-4 ${lockedScroll.isDragging ? 'cursor-grabbing snap-none' : 'cursor-grab'}`}
-          >
-            {LOCKED_CONTENT.map((product) => (
-              <div 
-                key={product.id}
-                onClick={() => handleLockedClickInternal(lockedScroll.hasMoved)}
-                className="snap-center shrink-0 w-40 flex flex-col gap-2 group cursor-pointer relative select-none"
-              >
-                <div className="aspect-square rounded-2xl overflow-hidden relative shadow-sm bg-slate-200">
-                  <img src={product.image} alt={product.title} className="w-full h-full object-cover opacity-60 blur-[1px] pointer-events-none" />
-                  <div className="absolute inset-0 bg-black/10 flex items-center justify-center">
-                    <div className="bg-white/90 p-3 rounded-full shadow-md">
-                      <Lock size={20} className="text-slate-900" />
+        {LOCKED_CONTENT.length > 0 && (
+          <section>
+            <div className="px-6 mb-4 flex items-center justify-between group cursor-pointer hover:opacity-80 transition-opacity">
+              <h3 className="text-xl font-bold text-slate-900">Contenidos Exclusivos</h3>
+              <ChevronRight size={24} className="text-slate-400" />
+            </div>
+            
+            <div 
+              ref={lockedScroll.ref}
+              {...lockedScroll.events}
+              className={`flex overflow-x-auto snap-x snap-mandatory no-scrollbar px-6 gap-4 pb-4 ${lockedScroll.isDragging ? 'cursor-grabbing snap-none' : 'cursor-grab'}`}
+            >
+              {LOCKED_CONTENT.map((product) => (
+                <div 
+                  key={product.id}
+                  onClick={() => handleLockedClickInternal(lockedScroll.hasMoved)}
+                  className="snap-center shrink-0 w-40 flex flex-col gap-2 group cursor-pointer relative select-none"
+                >
+                  <div className="aspect-square rounded-2xl overflow-hidden relative shadow-sm bg-slate-200">
+                    <img src={product.image} alt={product.title} className="w-full h-full object-cover opacity-60 blur-[1px] pointer-events-none" />
+                    <div className="absolute inset-0 bg-black/10 flex items-center justify-center">
+                      <div className="bg-white/90 p-3 rounded-full shadow-md">
+                        <Lock size={20} className="text-slate-900" />
+                      </div>
                     </div>
                   </div>
+                  <div>
+                    <h4 className="font-semibold text-slate-400 text-sm leading-tight">{product.title}</h4>
+                    <p className="text-xs text-slate-400 mt-0.5">{product.category}</p>
+                  </div>
                 </div>
-                <div>
-                  <h4 className="font-semibold text-slate-400 text-sm leading-tight">{product.title}</h4>
-                  <p className="text-xs text-slate-400 mt-0.5">{product.category}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
+              ))}
+            </div>
+          </section>
+        )}
       </div>
     </>
   );

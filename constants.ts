@@ -329,22 +329,7 @@ export const BONUSES: Product[] = [
   }
 ];
 
-export const LOCKED_CONTENT: Product[] = [
-  {
-    id: 'l1',
-    title: 'Mentoria Vip',
-    category: 'Acompanhamento',
-    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop',
-    isLocked: true
-  },
-  {
-    id: 'l2',
-    title: 'Protocolo Avançado',
-    category: 'Treinamento',
-    image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=2070&auto=format&fit=crop',
-    isLocked: true
-  }
-];
+export const LOCKED_CONTENT: Product[] = [];
 
 export const MOTIVATIONAL_QUOTES = [
   "Pequeños pasos, grandes transformaciones.",
