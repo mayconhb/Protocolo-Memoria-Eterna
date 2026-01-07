@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Download, Leaf, Loader2 } from 'lucide-react';
+import { Brain, Download, Loader2 } from 'lucide-react';
 
 interface LoginViewProps {
   onLogin: (name: string, email: string) => void;
@@ -51,7 +51,7 @@ export const LoginView: React.FC<LoginViewProps> = ({ onLogin, isInstalled, onIn
         {/* Brand */}
         <div className="flex flex-col items-center mb-8">
           <div className="w-16 h-16 bg-gradient-to-br from-emerald-100 to-emerald-50 rounded-2xl flex items-center justify-center mb-4 text-emerald-600 shadow-sm border border-emerald-100/50">
-            <Leaf size={32} fill="currentColor" />
+            <Brain size={32} fill="currentColor" />
           </div>
           <h1 className="text-2xl font-bold text-slate-900">Protocolo Memoria Eterna</h1>
           <p className="text-slate-500 text-sm">Accede a tu cuenta</p>

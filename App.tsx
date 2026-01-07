@@ -5,7 +5,7 @@ import { ProfileView } from './components/ProfileView';
 import { TabBar } from './components/TabBar';
 import { ProductDetailView } from './components/ProductDetailView';
 import { Product, ViewState, Tab } from './types';
-import { Download, Star, Share, MoreVertical, Plus, X, Smartphone } from 'lucide-react';
+import { Brain, Download, Star, Share, MoreVertical, Plus, X, Smartphone } from 'lucide-react';
 
 interface BeforeInstallPromptEvent extends Event {
   prompt: () => Promise<void>;
@@ -295,8 +295,8 @@ const App: React.FC = () => {
             <X size={24} />
           </button>
 
-          <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto text-emerald-600">
-            <Smartphone size={32} />
+          <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto text-emerald-600 ring-4 ring-emerald-50">
+            <Brain size={32} />
           </div>
           
           <h3 className="text-xl font-bold text-slate-900">
