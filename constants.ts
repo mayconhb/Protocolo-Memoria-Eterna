@@ -12,7 +12,7 @@ export const PRODUCTS: Product[] = [
     category: 'Receta',
     image: '/gelatina-reductora.png',
     isLocked: false,
-    description: 'Guía práctica con la receita y el método de uso del tónico cerebral para potenciar tu memoria.',
+    description: 'Guía prática con la receita y el método de uso del tónico cerebral para potenciar tu memoria.',
     duration: 'Ritual diario',
     lessons: 0,
     recipeDetails: {
@@ -25,25 +25,15 @@ export const PRODUCTS: Product[] = [
       preparation: [
         { title: "La Lista de Compras Sagrada", step: "Asegúrate de conseguir miel orgánica pura, cúrcuma de alta calidad y ashwagandha en polvo auténtica." },
         { title: "Medidas de Ingeniería Reversa", step: "Mezcla 1 cucharada de miel con 1/2 cucharadita de cúrcuma e una pizca generosa de ashwagandha." },
-        { title: "El Ritual de 57 Segundos", step: "Mezcla los polvos con la miel enérgicamente durante 57 segundos. Este movimiento sensorial 'activa' los compuestos antes de añadir el líquido tibio." },
+        { title: "El Ritual de 57 Segundos", step: "Mezcla los polvos con la miel enérgicamente durante 57 segundos. Este movimento sensorial 'activa' los compuestos antes de añadir el líquido tibio." },
         { title: "Disolución Final", step: "Añade el agua tibia o leche vegetal y revuelve suavemente hasta que sea homogéneo." }
       ],
       usage: [
         { title: "Ciclo de Uso Imperativo", content: "Tomar 45 minutos antes de dormir para permitir que los activos actúen durante el sueño profundo (fase REM)." }
       ],
-      tips: [
-        "Para una mejor absorción en LATAM, puedes añadir una pizca de pimienta negra para potenciar la cúrcuma.",
-        "Usa miel local de tu región para mejores beneficios inmunológicos.",
-        "Si usas leche vegetal, la de almendras o coco son las mejores opciones."
-      ],
-      variants: [
-        "Versión Nocturna: Añade una gota de esencia de vainilla natural para mayor relajación.",
-        "Versión Intensa: Aumenta la ashwagandha a media cucharadita si el estrés es muy alto."
-      ],
-      warnings: [
-        "Consulta con un médico si estás embarazada o en periodo de lactancia.",
-        "La ashwagandha puede interactuar con medicamentos para la tiroides o diabetes."
-      ]
+      tips: [],
+      variants: [],
+      warnings: []
     }
   },
   {
@@ -74,7 +64,7 @@ export const PRODUCTS: Product[] = [
         focus: "reducir inflamación leve con compuestos naturales.",
         tricks: [
           "Shot antiinflamatorio: jengibre + cúrcuma + pimienta negra + limón (1 vez).",
-          "Añadir cúrcuma en alguna comida (¼ cucharadita).",
+          "Añadir cúrcuma en alguma comida (¼ cucharadita).",
           "Bebidas calientes: té verde o té de jengibre.",
           "10 minutos de respiración profunda para bajar cortisol.",
           "Caminata ligera de 20–30 minutos."
@@ -110,7 +100,7 @@ export const PRODUCTS: Product[] = [
         tricks: [
           "Té de diente de león o boldo (mañana o después del almuerzo).",
           "Hoy: cero alcohol, cero frituras, cero azúcar.",
-          "Añadir limón en alguna comida.",
+          "Añadir limón en alguma comida.",
           "2 litros de agua + 300 ml de agua de coco.",
           "Baño caliente terminando con agua fría en las piernas (contrastes)."
         ]
@@ -121,7 +111,7 @@ export const PRODUCTS: Product[] = [
         focus: "estabilizar glucosa e insulina para bajar inflamación.",
         tricks: [
           "1 cucharada de vinagre de manzana diluida en agua antes de una comida.",
-          "Añadir canela en alguna fruta o bebida del día.",
+          "Añadir canela en alguma fruta o bebida del día.",
           "Evitar completamente harinas refinadas.",
           "Té verde entre comidas.",
           "No comer 2–3 horas antes de dormir."
@@ -204,7 +194,7 @@ export const BONUSES: Product[] = [
       {
         title: "Estrategia General",
         blocks: [
-          { type: 'text', content: "Este no es un plan de hambre, sino de limpieza. Eliminaremos alimentos inflamatorios (azúcar, harina, lácteos) y aumentaremos la hidratación y fibra." },
+          { type: 'text', content: "Este no es un plan de hambre, sino de limpieza. Eliminaremos alimentos inflamatorios (azúcar, harina, lácteos) e aumentaremos la hidratación y fibra." },
           { type: 'warning', title: "Regla de Oro", content: "Bebe al menos 3 litros de líquido al día (agua, tés, caldos) durante estos 3 días." }
         ]
       },
@@ -277,7 +267,7 @@ export const BONUSES: Product[] = [
           { type: 'recipe_card', title: "Menta Piperita", content: "Hojas frescas o secas infusionadas 5 min. Elimina gases instantaneamente." },
           { type: 'recipe_card', title: "Hinojo", content: "1 cdita de semillas machacadas. Infusionar 5 min. Reduce hinchazón abdominal." },
           { type: 'recipe_card', title: "Manzanilla y Anís", content: "Mezcla clásica para relajar el estómago después de comidas pesadas." },
-          { type: 'recipe_card', title: "Té de Melisa", content: "Relaja el sistema nervoso y digestivo. Ideal para el estrés que causa hinchazón." },
+          { type: 'recipe_card', title: "Té de Melisa", content: "Relaja el sistema nervoso e digestivo. Ideal para el estrés que causa hinchazón." },
           { type: 'recipe_card', title: "Té de Rooibos", content: "Sin teína, dulce natural. Rico en minerales y digestivo." },
           { type: 'recipe_card', title: "Té de Jengibre y Limón", content: "Rodajas de jengibre hervidas 5 min + jugo de limón. Antiinflamatorio digestivo." },
           { type: 'recipe_card', title: "Té de Cúrcuma (Golden Tea)", content: "1/2 cdita cúrcuma + pimienta negra + leite vegetal. Antiinflamatorio potente." }
@@ -308,7 +298,7 @@ export const BONUSES: Product[] = [
         title: "Jugos Rojos y Naranjas (Piel y Circulación)",
         blocks: [
           { type: 'recipe_card', title: "6. Bomba Vitamina C", content: "2 zanahorias + 1 naranja + 1/2 cdita cúrcuma. Antiinflamatorio." },
-          { type: 'recipe_card', title: "7. Circulación Total", content: "1 remolacha pequeña + 1 zanahoria + 1 manzana + limón. Mejora flujo sanguíneo." },
+          { type: 'recipe_card', title: "7. Circulación Total", content: "1 remolacha pequeña + 1 zanahoria + 1 manzana + limón. Mejora fluxo sanguíneo." },
           { type: 'recipe_card', title: "8. Piel Radiante", content: "2 zanahorias + 1/2 pimiento rojo + 1 naranja. Rico en betacarotenos." },
           { type: 'recipe_card', title: "9. Antioxidante Berry", content: "1 taza frutos rojos + 1/2 remolacha + agua de coco." },
           { type: 'recipe_card', title: "10. Anti-Inflamatorio Dulce", content: "1 rodaja piña + 1 trozo cúrcuma raíz + 1 zanahoria." }
@@ -373,7 +363,7 @@ export const BONUSES: Product[] = [
           { type: 'recipe_card', title: "2. Trufas de Energía", content: "Procesar 1 taza dátiles + 1/2 taza nueces + 2 cdas cacao. Formar bolitas." },
           { type: 'recipe_card', title: "3. Brownie Express", content: "1 huevo + 1 banana + 2 cdas cacao + 1 cdita polvo hornear. Microondas 2 min." },
           { type: 'recipe_card', title: "4. Chocolate Caliente Fit", content: "Leite almendras + 1 cda cacao + canela + estevia. Calentar sin hervir." },
-          { type: 'recipe_card', title: "5. Bark de Yogurt", content: "Extender yogurt griego en bandeja, agregar chips chocolate 70% y fresas. Congelar." }
+          { type: 'recipe_card', title: "5. Bark de Yogurt", content: "Extender yogurt griego en bandeja, agregar chips chocolate 70% e fresas. Congelar." }
         ]
       },
       {
@@ -381,7 +371,7 @@ export const BONUSES: Product[] = [
         blocks: [
           { type: 'recipe_card', title: "6. Helado de 1 Ingrediente", content: "Congelar bananas en rodajas. Procesar hasta cremosidad. Opcional: canela." },
           { type: 'recipe_card', title: "7. Gelatina de Yogurt", content: "Mezclar yogurt griego con semillas chía y vainilla. Reposar noche. Top con berries." },
-          { type: 'recipe_card', title: "8. Manzanas Asadas", content: "Hornear manzanas con canela y nueces por 20 min. Servir con yogurt." },
+          { type: 'recipe_card', title: "8. Manzanas Asadas", content: "Hornear manzanas con canela e nueces por 20 min. Servir con yogurt." },
           { type: 'recipe_card', title: "9. Brochetas de Fruta", content: "Uvas y fresas bañadas en chocolate 70% derretido. Enfriar." },
           { type: 'recipe_card', title: "10. Sorbet de Mango", content: "Procesar mango congelado con jugo de limón y menta." }
         ]
@@ -410,7 +400,7 @@ export const BONUSES: Product[] = [
       {
         title: "Los 3 Pilares",
         blocks: [
-          { type: 'text', content: "La celulitis es inflamación y retención. Para atacarla necesitamos: 1) Dieta Limpia, 2) Hidratación, 3) Estimulación Local." }
+          { type: 'text', content: "La celulitis es inflamación e retención. Para atacarla necesitamos: 1) Dieta Limpia, 2) Hidratación, 3) Estimulación Local." }
         ]
       },
       {
@@ -428,9 +418,9 @@ export const BONUSES: Product[] = [
         title: "Técnicas Externas",
         blocks: [
           { type: 'subtitle', title: "Cepillado en Seco" },
-          { type: 'text', content: "Usa um cepillo de cerdas naturales antes de la ducha. Realiza movimientos ascendentes hacia el corazón por 3 minutos." },
+          { type: 'text', content: "Usa um cepillo de cerdas naturales antes de la ducha. Realiza movimentos ascendentes hacia el corazón por 3 minutos." },
           { type: 'subtitle', title: "Automasaje de Drenaje" },
-          { type: 'text', content: "Después de la ducha, aplica aceite de abedul o almendras. Usa los nudillos en círculos suaves y presión moderada." }
+          { type: 'text', content: "Después de la ducha, aplica aceite de abedul o almendras. Usa los nudillos en círculos suaves e presión moderada." }
         ]
       }
     ]
