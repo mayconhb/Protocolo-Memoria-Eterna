@@ -217,7 +217,7 @@ export const BONUSES: Product[] = [
     id: 'b3',
     title: 'Memory Pulse',
     category: 'Biohacking Sonoro',
-    image: 'attached_assets/stock_images/senior_woman_gray_ha_d29dd686.jpg',
+    image: '/memory_pulse_cover.png',
     isLocked: false,
     description: 'Entrenamiento cerebral mediante ondas gama para alcanzar niveles máximos de enfoque.',
     duration: 'Terapia Binaural',
