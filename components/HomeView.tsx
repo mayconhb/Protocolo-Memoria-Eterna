@@ -63,8 +63,8 @@ export const HomeView: React.FC<HomeViewProps> = ({ onProductClick, onShowUpgrad
   const lockedScroll = useDraggableScroll();
 
   const banners = [
-    { id: 1, image: bannerMemoria1, title: "Potencia tu Memoria\nProtocolo Eterno." },
-    { id: 2, image: bannerMemoria2, title: "Mente Clara y Fuerte\nNeuroplasticidad Total." }
+    { id: 1, image: bannerMemoria1, title: "Desbloquea el Poder\nde tu Mente." },
+    { id: 2, image: bannerMemoria2, title: "Claridad Infinita\ny Enfoque Total." }
   ];
 
   const handleBannerScroll = (e: React.UIEvent<HTMLDivElement>) => {
