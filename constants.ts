@@ -257,7 +257,7 @@ export const BONUSES: Product[] = [
       {
         title: "Sesión de Reinicio Cerebral",
         blocks: [
-          { type: 'video_session', title: "Memory Pulse", duration: "8 min", frequency: "Gamma", videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4" },
+          { type: 'video_session', title: "Memory Pulse", duration: "8 min", frequency: "Gamma", videoUrl: "/attached_assets/2_1767827904922.mp4" },
           { type: 'text', content: "Audio de Frecuencias Gamma para reiniciar el cerebro y alcanzar niveles máximos de enfoque." },
           { type: 'tip', title: "Instrucciones", content: "Busca un lugar tranquilo, usa auriculares y cierra los ojos para una inmersión total." }
         ]
