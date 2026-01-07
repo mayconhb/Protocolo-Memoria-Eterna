@@ -12,49 +12,37 @@ export const PRODUCTS: Product[] = [
     category: 'Receta',
     image: '/gelatina-reductora.png',
     isLocked: false,
-    description: 'Una poderosa aliada para el adelgazamiento, rica en colágeno y propiedades diuréticas.',
-    duration: 'PREP: 15min',
-    lessons: 0, // Não é um curso
+    description: 'Guía práctica con la receita y el método de uso del tónico cerebral para potenciar tu memoria.',
+    duration: 'Ritual diario',
+    lessons: 0,
     recipeDetails: {
       ingredients: [
-        "1 sobre (≈12 g) de gelatina incolora y sin sabor",
-        "200 ml de té verde muy concentrado",
-        "1 cucharada sopera de chía hidratada (hidratar en 40 ml de agua por 10 min)",
-        "1 cucharada de jengibre fresco rallado (o 1 cucharadita colmada de jengibre en polvo)",
-        "Jugo de ½ limón (opcional, mejora el sabor)",
-        "Endulzante a gusto (opcional)"
+        "Miel Pura (Vehículo de absorción)",
+        "Cúrcuma en Polvo (Raíz Dourada - Antiinflamatoria)",
+        "Ashwagandha en Polvo (Raíz Maestra - Anti-stress)",
+        "Agua tibia o leche vegetal (base)"
       ],
       preparation: [
-        { title: "Preparar el té verde súper concentrado", step: "En 200 ml de agua caliente (sin hervir), infusionar 3 saquitos de té verde (o 2 cucharadas de té suelto) por 1 minuto. Colar y mantener caliente." },
-        { title: "Hidratar la chía", step: "Mezclar 1 cucharada sopera de chía con 40 ml de agua; dejar reposar ~10 minutos hasta formar gel." },
-        { title: "Hidratar la gelatina", step: "Colocar la gelatina en 50 ml de agua fría y dejar reposar 5 minutos." },
-        { title: "Disolver la gelatina", step: "Verter el té verde caliente sobre la gelatina hidratada y mezclar hasta disolver completamente." },
-        { title: "Agregar el jengibre", step: "Añadir el jengibre rallado mientras la mezcla esté tibia para liberar más compuestos activos." },
-        { title: "Ajustar sabor", step: "Agregar el jugo de limón y el endulzante si se desea." },
-        { title: "Incorporar la chía", step: "Cuando la mezcla esté tibia (no caliente), añadir la chía hidratada y mezclar bien." },
-        { title: "Refrigerar", step: "Verter en un recipiente y llevar a la refrigeradora por 2–3 horas hasta que solidifique." },
-        { title: "Consumir", step: "Tomar 30 minutos antes de la comida principal." }
+        { title: "La Lista de Compras Sagrada", step: "Asegúrate de conseguir miel orgánica pura, cúrcuma de alta calidad y ashwagandha en polvo auténtica." },
+        { title: "Medidas de Ingeniería Reversa", step: "Mezcla 1 cucharada de miel con 1/2 cucharadita de cúrcuma e una pizca generosa de ashwagandha." },
+        { title: "El Ritual de 57 Segundos", step: "Mezcla los polvos con la miel enérgicamente durante 57 segundos. Este movimiento sensorial 'activa' los compuestos antes de añadir el líquido tibio." },
+        { title: "Disolución Final", step: "Añade el agua tibia o leche vegetal y revuelve suavemente hasta que sea homogéneo." }
       ],
       usage: [
-        { title: "Cuándo tomar", content: "30 minutos antes del almuerzo o la cena." },
-        { title: "Cantidad recomendada", content: "1 porción." }
+        { title: "Ciclo de Uso Imperativo", content: "Tomar 45 minutos antes de dormir para permitir que los activos actúen durante el sueño profundo (fase REM)." }
       ],
       tips: [
-        "Si el té queda amargo, reducir el tiempo de infusión a 30–45 segundos.",
-        "Si se desea una textura más firme, reducir el agua del té en 10–20 ml.",
-        "Si queda una capa acuosa arriba, mezclar antes de consumir.",
-        "Versión sin cafeína: usar té verde descafeinado o reemplazar por té de hibisco (cambia el efecto).",
-        "Para una versión más dulce sin calorías, usar stevia o eritritol."
+        "Para una mejor absorción en LATAM, puedes añadir una pizca de pimienta negra para potenciar la cúrcuma.",
+        "Usa miel local de tu región para mejores beneficios inmunológicos.",
+        "Si usas leche vegetal, la de almendras o coco son las mejores opciones."
       ],
       variants: [
-        "Suave: 1 saquito de té verde + 1 cucharadita de chía.",
-        "Ultra (solo para tolerantes a cafeína): reemplazar parte del té por ½ cucharadita de matcha.",
-        "Vegana: usar agar-agar en lugar de gelatina (la textura será más firme).",
-        "Con colágeno: añadir 1 cucharada de colágeno hidrolizado cuando la mezcla esté tibia."
+        "Versión Nocturna: Añade una gota de esencia de vainilla natural para mayor relajación.",
+        "Versión Intensa: Aumenta la ashwagandha a media cucharadita si el estrés es muy alto."
       ],
       warnings: [
-        "Contiene cafeína (té verde). Evitar si se es muy sensible, si hay hipertensión no controlada o si un médico lo indicó.",
-        "El jengibre puede causar acidez en algunas personas; reducir la dosis si ocurre."
+        "Consulta con un médico si estás embarazada o en periodo de lactancia.",
+        "La ashwagandha puede interactuar con medicamentos para la tiroides o diabetes."
       ]
     }
   },
@@ -71,7 +59,7 @@ export const PRODUCTS: Product[] = [
       {
         day: 1,
         title: "Drenaje Inicial",
-        focus: "eliminar líquidos y deshinchar desde el primer día.",
+        focus: "eliminar líquidos y deshinchar desde el primeiro día.",
         tricks: [
           "500 ml de agua tibia con limón repartidos por la mañana.",
           "Beber 2.5 litros de agua durante el día.",
@@ -286,13 +274,13 @@ export const BONUSES: Product[] = [
       {
         title: "3. Tés Digestivos y Relax (Vientre Plano)",
         blocks: [
-          { type: 'recipe_card', title: "Menta Piperita", content: "Hojas frescas o secas infusionadas 5 min. Elimina gases instantáneamente." },
+          { type: 'recipe_card', title: "Menta Piperita", content: "Hojas frescas o secas infusionadas 5 min. Elimina gases instantaneamente." },
           { type: 'recipe_card', title: "Hinojo", content: "1 cdita de semillas machacadas. Infusionar 5 min. Reduce hinchazón abdominal." },
           { type: 'recipe_card', title: "Manzanilla y Anís", content: "Mezcla clásica para relajar el estómago después de comidas pesadas." },
-          { type: 'recipe_card', title: "Té de Melisa", content: "Relaja el sistema nervioso y digestivo. Ideal para el estrés que causa hinchazón." },
+          { type: 'recipe_card', title: "Té de Melisa", content: "Relaja el sistema nervoso y digestivo. Ideal para el estrés que causa hinchazón." },
           { type: 'recipe_card', title: "Té de Rooibos", content: "Sin teína, dulce natural. Rico en minerales y digestivo." },
           { type: 'recipe_card', title: "Té de Jengibre y Limón", content: "Rodajas de jengibre hervidas 5 min + jugo de limón. Antiinflamatorio digestivo." },
-          { type: 'recipe_card', title: "Té de Cúrcuma (Golden Tea)", content: "1/2 cdita cúrcuma + pimienta negra + leche vegetal. Antiinflamatorio potente." }
+          { type: 'recipe_card', title: "Té de Cúrcuma (Golden Tea)", content: "1/2 cdita cúrcuma + pimienta negra + leite vegetal. Antiinflamatorio potente." }
         ]
       }
     ]
@@ -351,7 +339,7 @@ export const BONUSES: Product[] = [
         title: "Shots para la Mañana (Ayunas)",
         blocks: [
           { type: 'recipe_card', title: "1. Despertar Picante", content: "Jugo 1 limón + Pizca pimienta cayena + 1 cdita miel." },
-          { type: 'recipe_card', title: "2. Anti-Inflamación Oro", content: "Jugo 1 naranja + 1 cdita cúrcuma polvo + Pizca pimienta negra + 1 cdita aceite oliva." },
+          { type: 'recipe_card', title: "2. Anti-Inflamación Oro", content: "Jugo 1 naranja + 1 cdita cúrcuma pó + Pizca pimienta negra + 1 cdita aceite oliva." },
           { type: 'recipe_card', title: "3. Digestión Total", content: "Jugo 1 limón + 1 cdita vinagre manzana + 20ml agua tibia." },
           { type: 'recipe_card', title: "4. Inmunidad Verde", content: "Jugo jengibre (exprímelo) + Jugo limón + Pizca sal marina." },
           { type: 'recipe_card', title: "5. Energy Boost", content: "Jugo pomelo + 1/2 cdita Guaraná o Matcha." }
@@ -381,10 +369,10 @@ export const BONUSES: Product[] = [
       {
         title: "Chocolatosos",
         blocks: [
-          { type: 'recipe_card', title: "1. Mousse de Aguacate", content: "Licuar 1 aguacate + 3 cdas cacao + estevia + chorrito leche vegetal. Enfriar." },
+          { type: 'recipe_card', title: "1. Mousse de Aguacate", content: "Licuar 1 aguacate + 3 cdas cacao + estevia + chorrito leite vegetal. Enfriar." },
           { type: 'recipe_card', title: "2. Trufas de Energía", content: "Procesar 1 taza dátiles + 1/2 taza nueces + 2 cdas cacao. Formar bolitas." },
           { type: 'recipe_card', title: "3. Brownie Express", content: "1 huevo + 1 banana + 2 cdas cacao + 1 cdita polvo hornear. Microondas 2 min." },
-          { type: 'recipe_card', title: "4. Chocolate Caliente Fit", content: "Leche almendras + 1 cda cacao + canela + estevia. Calentar sin hervir." },
+          { type: 'recipe_card', title: "4. Chocolate Caliente Fit", content: "Leite almendras + 1 cda cacao + canela + estevia. Calentar sin hervir." },
           { type: 'recipe_card', title: "5. Bark de Yogurt", content: "Extender yogurt griego en bandeja, agregar chips chocolate 70% y fresas. Congelar." }
         ]
       },
@@ -440,10 +428,9 @@ export const BONUSES: Product[] = [
         title: "Técnicas Externas",
         blocks: [
           { type: 'subtitle', title: "Cepillado en Seco" },
-          { type: 'text', content: "Antes de ducharte, cepilla la piel en movimientos ascendentes desde los tobillos hacia el corazón. 5 minutos diarios hacen maravillas." },
-          { type: 'subtitle', title: "Duchas de Contraste" },
-          { type: 'text', content: "Alterna agua caliente y fría en las piernas al final del baño para activar la circulación sanguínea." },
-          { type: 'recipe_card', title: "Exfoliante de Café", content: "Mezcla borra de café con aceite de coco. Masajea fuerte en zonas afectadas 2 veces por semana." }
+          { type: 'text', content: "Usa um cepillo de cerdas naturales antes de la ducha. Realiza movimientos ascendentes hacia el corazón por 3 minutos." },
+          { type: 'subtitle', title: "Automasaje de Drenaje" },
+          { type: 'text', content: "Después de la ducha, aplica aceite de abedul o almendras. Usa los nudillos en círculos suaves y presión moderada." }
         ]
       }
     ]
@@ -453,82 +440,26 @@ export const BONUSES: Product[] = [
 export const LOCKED_CONTENT: Product[] = [
   {
     id: 'l1',
-    title: 'Acelerador 14 Días',
-    category: 'Protocolo Avanzado',
-    image: 'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=2070&auto=format&fit=crop',
-    isLocked: true,
-    description: 'Acompañamiento personalizado con nutricionistas.',
+    title: 'Mentoria Vip',
+    category: 'Acompanhamento',
+    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop',
+    isLocked: true
   },
   {
     id: 'l2',
-    title: 'Quema-Grasa Mientras Duermes',
-    category: 'Fórmula Nocturna',
-    image: quemaGrasaDuermesImg,
-    isLocked: true,
-    description: 'Descuentos exclusivos en socios.',
+    title: 'Protocolo Avançado',
+    category: 'Treinamento',
+    image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=2070&auto=format&fit=crop',
+    isLocked: true
   }
 ];
 
-export const MOTIVATIONAL_QUOTES: string[] = [
-  "El cuerpo logra lo que la mente cree.",
-  "Pequeños progresos suman grandes resultados.",
-  "No te rindas con lo que más quieres en la vida.",
-  "Si fuera fácil, todo el mundo lo haría.",
-  "Tu salud es tu mayor inversión.",
-  "Cada entrenamiento cuenta, cada comida importa.",
-  "Enfócate en el proceso, no solo en el resultado.",
-  "Sé más fuerte que tu mejor excusa.",
-  "Disciplina es libertad.",
-  "Eres capaz de cosas increíbles.",
-  "El dolor de hoy es la fuerza de mañana.",
-  "Cuida tu cuerpo, es el único lugar que tienes para vivir.",
-  "No se trata de tener tiempo, se trata de priorizar.",
-  "El éxito comienza fuera de tu zona de confort.",
-  "La motivación es lo que te hace empezar. El hábito es lo que te mantiene.",
-  "Sé tu mejor versión todos los días.",
-  "Créelo: estás más cerca que ayer.",
-  "Comer bien es una forma de autorrespeto.",
-  "No disminuyas la meta, aumenta el esfuerzo.",
-  "El único entrenamiento malo es el que no sucedió.",
-  "Las excusas no queman calorías.",
-  "Tu futuro es creado por lo que haces hoy.",
-  "Suda ahora, brilla después.",
-  "La constancia es la clave para la transformación.",
-  "Enamórate de cuidar de ti mismo.",
-  "No necesitas ser perfecto, solo constante.",
-  "El viaje de mil millas comienza con un paso.",
-  "Supera tus límites, un día a la vez.",
-  "Siéntete orgulloso de cada elección saludable.",
-  "El esfuerzo de hoy es el cuerpo de mañana.",
-  "Nutre tu cuerpo, él te lo agradecerá.",
-  "No pares hasta estar orgulloso.",
-  "El cambio duele, pero el estancamiento duele más.",
-  "Sé obstinado con tus objetivos.",
-  "Todo parece imposible hasta que se hace.",
-  "Eres el proyecto más importante de tu vida.",
-  "Respira profundo y continúa.",
-  "Un hábito saludable a la vez.",
-  "Celebra cada pequeña victoria.",
-  "No te compares, inspírate.",
-  "El secreto es no rendirse.",
-  "La salud es la verdadera riqueza.",
-  "Cambia tus hábitos, cambia tu vida.",
-  "Sé agradecido por lo que tu cuerpo hace por ti.",
-  "El equilibrio es el secreto del éxito.",
-  "Entrena para ser fuerte, no solo delgado.",
-  "Tu determinación define tu destino.",
-  "Hazlo por ti, no por los otros.",
-  "Empieza donde estás, usa lo que tienes.",
-  "Lo imposible es solo una opinión.",
-  "Despierta con determinación, duerme con satisfacción.",
-  "La alimentación es el combustible de la vida.",
-  "Sé paciente contigo mismo.",
-  "Cada día es una nueva oportunidad.",
-  "Desafíate a ser mejor que ayer.",
-  "Ama el proceso y los resultados vendrán.",
-  "Vive ligero, vive feliz.",
-  "Tu energía te presenta antes de hablar.",
-  "Invierte en ti, rinde los mejores intereses.",
-  "¡Vamos juntos en esta jornada de transformación!"
+export const MOTIVATIONAL_QUOTES = [
+  "Pequeños pasos, grandes transformaciones.",
+  "Tu cuerpo es tu templo, cuídalo con amor.",
+  "La constancia es la clave del éxito.",
+  "Hoy es un gran día para ser tu mejor versión.",
+  "Cree en ti y en tu proceso.",
+  "La disciplina te llevará donde la motivación no alcanza.",
+  "Un hábito saludable a la vez."
 ];
-
