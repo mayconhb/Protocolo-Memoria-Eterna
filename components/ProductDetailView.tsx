@@ -598,127 +598,125 @@ export const ProductDetailView: React.FC<ProductDetailViewProps> = ({ product, o
               </div>
            </div>
         ) : isRecipe && product.recipeDetails ? (
-           /* --- RECIPE VIEW CONTENT --- */
-          <div className="space-y-10 animate-fade-in-up">
-            
-            {/* Ingredients Section */}
-            <div>
-              <div className="flex items-center gap-3 mb-5">
-                <div className="bg-emerald-100 p-2 rounded-xl text-emerald-700">
-                    <ChefHat size={22} strokeWidth={2.5} />
+          /* --- RECIPE VIEW CONTENT --- */
+          <div className="animate-fade-in-up space-y-10">
+            {/* Seção de Ingredientes */}
+            <section>
+              <h3 className="font-bold text-slate-900 text-xl mb-6 flex items-center gap-2">
+                <div className="p-2 bg-emerald-100 rounded-xl text-emerald-600">
+                  <Utensils size={20} />
                 </div>
-                <h3 className="font-bold text-slate-900 text-lg">Ingredientes</h3>
-              </div>
-              
-              <div className="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden">
-                  {product.recipeDetails.ingredients.map((ing, idx) => (
-                    <div key={idx} className="flex items-start gap-4 p-4 border-b border-slate-50 last:border-0 hover:bg-slate-50/50 transition-colors">
-                      <div className="w-5 h-5 rounded-full border-2 border-emerald-200 mt-0.5 shrink-0 flex items-center justify-center">
-                          <div className="w-2.5 h-2.5 rounded-full bg-emerald-500 opacity-0" /> {/* Checkbox visual placeholder */}
-                      </div>
-                      <span className="text-slate-700 text-[15px] leading-relaxed font-medium">{ing}</span>
+                Ingredientes
+              </h3>
+              <div className="grid grid-cols-1 gap-3">
+                {product.recipeDetails.ingredients.map((item, i) => (
+                  <div key={i} className="flex items-center gap-4 bg-slate-50 p-4 rounded-2xl border border-slate-100/50 hover:bg-emerald-50/30 transition-colors group">
+                    <div className="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center text-emerald-500 font-bold group-hover:scale-110 transition-transform">
+                      <Check size={18} />
                     </div>
-                  ))}
+                    <span className="text-slate-700 font-medium">{item}</span>
+                  </div>
+                ))}
               </div>
-            </div>
+            </section>
 
-            {/* Preparation Section */}
-            <div>
-              <div className="flex items-center gap-3 mb-6">
-                <div className="bg-amber-100 p-2 rounded-xl text-amber-700">
-                    <Utensils size={22} strokeWidth={2.5} />
+            {/* Seção de Preparação */}
+            <section>
+              <h3 className="font-bold text-slate-900 text-xl mb-6 flex items-center gap-2">
+                <div className="p-2 bg-orange-100 rounded-xl text-orange-600">
+                  <ChefHat size={20} />
                 </div>
-                <h3 className="font-bold text-slate-900 text-lg">Modo de Preparación</h3>
-              </div>
-
-              <div className="relative space-y-0">
-                {/* Vertical Line */}
-                <div className="absolute left-[19px] top-4 bottom-4 w-0.5 bg-slate-100" />
-
-                {product.recipeDetails.preparation.map((step, idx) => (
-                  <div key={idx} className="relative pl-14 pb-8 last:pb-0">
-                    {/* Number Bubble */}
-                    <div className="absolute left-0 top-0 w-10 h-10 rounded-full bg-slate-900 text-white font-bold flex items-center justify-center text-sm shadow-lg shadow-slate-200 ring-4 ring-white z-10">
-                      {idx + 1}
+                Ritual de Preparación
+              </h3>
+              <div className="space-y-6">
+                {product.recipeDetails.preparation.map((step, i) => (
+                  <div key={i} className="relative pl-12">
+                    {i !== product.recipeDetails!.preparation.length - 1 && (
+                      <div className="absolute left-5 top-10 bottom-[-24px] w-0.5 bg-slate-100" />
+                    )}
+                    <div className="absolute left-0 top-0 w-10 h-10 rounded-full bg-slate-900 text-white flex items-center justify-center font-bold text-sm z-10 shadow-lg shadow-slate-200">
+                      {i + 1}
                     </div>
-                    
-                    {/* Step Card */}
-                    <div className="bg-slate-50 p-5 rounded-xl rounded-tl-none border border-slate-100">
-                        <h4 className="font-bold text-slate-900 text-[15px] mb-2">{step.title}</h4>
-                        <p className="text-slate-600 text-sm leading-relaxed">{step.step}</p>
+                    <div className="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm">
+                      <h4 className="font-bold text-slate-900 mb-2">{step.title}</h4>
+                      <p className="text-slate-600 text-sm leading-relaxed">{step.step}</p>
                     </div>
                   </div>
                 ))}
               </div>
-            </div>
+            </section>
 
-            {/* Grid of Info Cards (Usage, Tips) */}
-            <div className="grid grid-cols-1 gap-4">
-                {/* Usage Card */}
-                <div className="bg-blue-50/50 p-6 rounded-2xl border border-blue-100/50">
-                    <div className="flex items-center gap-2 mb-4">
-                        <Info className="text-blue-500" size={18} />
-                        <h3 className="font-bold text-slate-900 uppercase text-xs tracking-wider">Cómo Usar</h3>
-                    </div>
-                    <div className="grid grid-cols-2 gap-4">
-                        {product.recipeDetails.usage.map((item, idx) => (
-                        <div key={idx}>
-                            <p className="text-[10px] font-bold text-blue-400 uppercase mb-1">{item.title}</p>
-                            <p className="text-slate-700 font-medium text-sm">{item.content}</p>
-                        </div>
-                        ))}
-                    </div>
+            {/* Seção de Uso Imperativo */}
+            <section className="bg-slate-900 rounded-[2.5rem] p-8 text-white relative overflow-hidden shadow-2xl">
+              <div className="absolute top-0 right-0 p-8 opacity-10">
+                <Clock size={120} />
+              </div>
+              <div className="relative z-10">
+                <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full mb-6">
+                  <Target size={18} className="text-emerald-400" />
+                  <span className="text-xs font-bold uppercase tracking-widest">Uso Imperativo</span>
                 </div>
+                {product.recipeDetails.usage.map((use, i) => (
+                  <div key={i}>
+                    <h4 className="text-2xl font-bold mb-4 text-emerald-400">{use.title}</h4>
+                    <p className="text-slate-300 leading-relaxed text-lg">
+                      {use.content}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </section>
 
-                {/* Tips Card */}
-                <div className="bg-amber-50/50 p-6 rounded-2xl border border-amber-100/50">
-                    <div className="flex items-center gap-2 mb-4">
-                        <Lightbulb className="text-amber-500" size={18} />
-                        <h3 className="font-bold text-slate-900 uppercase text-xs tracking-wider">Tips del Chef</h3>
+            {/* Tips & Variants Grid */}
+            <div className="grid grid-cols-1 gap-6">
+              {/* Tips */}
+              <section className="bg-amber-50/50 rounded-3xl p-6 border border-amber-100">
+                <h4 className="font-bold text-amber-800 mb-4 flex items-center gap-2">
+                  <Lightbulb size={18} />
+                  Tips del Chef
+                </h4>
+                <div className="space-y-3">
+                  {product.recipeDetails.tips.map((tip, i) => (
+                    <div key={i} className="flex gap-3 text-sm text-amber-900/70 bg-white/60 p-3 rounded-xl border border-amber-100/50">
+                      <div className="w-1.5 h-1.5 rounded-full bg-amber-400 mt-2 shrink-0" />
+                      <span>{tip}</span>
                     </div>
-                    <ul className="space-y-3">
-                        {product.recipeDetails.tips.map((tip, idx) => (
-                            <li key={idx} className="flex gap-3 text-sm text-slate-700 leading-relaxed">
-                                <span className="text-amber-400 text-lg leading-none">•</span>
-                                <span>{tip}</span>
-                            </li>
-                        ))}
-                    </ul>
+                  ))}
                 </div>
-            </div>
+              </section>
 
-            {/* Variants Accordion-style */}
-            <div className="bg-purple-50/30 rounded-2xl border border-purple-100 p-6">
-                 <h3 className="font-bold text-slate-900 text-sm mb-4 flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-purple-500" />
-                    Variantes
-                 </h3>
-                 <div className="grid gap-3">
-                    {product.recipeDetails.variants.map((v, idx) => (
-                        <div key={idx} className="bg-white p-3 rounded-xl border border-purple-50 text-xs font-medium text-slate-600 shadow-sm">
-                            {v}
-                        </div>
-                    ))}
-                 </div>
+              {/* Variants */}
+              <section className="bg-emerald-50/50 rounded-3xl p-6 border border-emerald-100">
+                <h4 className="font-bold text-emerald-800 mb-4 flex items-center gap-2">
+                  <Star size={18} />
+                  Variantes
+                </h4>
+                <div className="space-y-3">
+                  {product.recipeDetails.variants.map((variant, i) => (
+                    <div key={i} className="flex gap-3 text-sm text-emerald-900/70 bg-white/60 p-3 rounded-xl border border-emerald-100/50">
+                      <Zap size={14} className="mt-1 shrink-0 text-emerald-500" />
+                      <span>{variant}</span>
+                    </div>
+                  ))}
+                </div>
+              </section>
             </div>
 
             {/* Warnings */}
-            <div className="bg-red-50 p-5 rounded-2xl border border-red-100 flex gap-4">
-              <div className="bg-white p-2 rounded-full h-fit shadow-sm">
-                  <AlertTriangle className="text-red-500" size={20} />
+            <section className="bg-red-50 rounded-3xl p-6 border border-red-100">
+              <h4 className="font-bold text-red-800 mb-4 flex items-center gap-2">
+                <AlertTriangle size={18} />
+                Atención
+              </h4>
+              <div className="space-y-3">
+                {product.recipeDetails.warnings.map((warning, i) => (
+                  <div key={i} className="flex gap-3 text-sm text-red-900/70 bg-white/60 p-3 rounded-xl border border-red-100/50">
+                    <Info size={14} className="mt-1 shrink-0 text-red-400" />
+                    <span>{warning}</span>
+                  </div>
+                ))}
               </div>
-              <div className="space-y-1 pt-1">
-                 <h4 className="font-bold text-red-900 text-xs uppercase tracking-wide">Atención</h4>
-                 <ul className="space-y-1.5">
-                    {product.recipeDetails.warnings.map((w, idx) => (
-                      <li key={idx} className="text-xs text-red-700/80 leading-relaxed font-medium">
-                        {w}
-                      </li>
-                    ))}
-                 </ul>
-              </div>
-            </div>
-            
+            </section>
           </div>
         ) : !isTracker && !isGuide && (
           /* --- STANDARD COURSE VIEW (LESSONS) --- */
