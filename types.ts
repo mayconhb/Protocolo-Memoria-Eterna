@@ -6,6 +6,7 @@ export interface RecipeDetails {
   tips: string[];
   variants: string[];
   warnings: string[];
+  benefits?: string[];
 }
 
 export interface ProtocolDay {

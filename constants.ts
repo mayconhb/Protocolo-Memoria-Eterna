@@ -33,7 +33,13 @@ export const PRODUCTS: Product[] = [
       ],
       tips: [],
       variants: [],
-      warnings: []
+      warnings: [],
+      benefits: [
+        "Sinergia Cognitiva: La combinación de curcumina y ashwagandha reduce el cortisol, permitiendo que el cerebro regenere conexiones neuronales.",
+        "Limpieza Glinfática: Durante el sueño REM, este tónico ayuda a filtrar las toxinas acumuladas durante el día.",
+        "Bio-Disponibilidad: El vehículo de miel pura asegura que los nutrientes lleguen rápidamente al torrente sanguíneo.",
+        "Paz Mental: Reduce la ansiedad nocturna, preparando el terreno para una memoria cristalina al despertar."
+      ]
     }
   },
   {

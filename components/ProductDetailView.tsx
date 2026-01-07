@@ -360,7 +360,7 @@ export const ProductDetailView: React.FC<ProductDetailViewProps> = ({ product, o
                         {weights.length === 1 ? (
                              <div className="h-48 mx-6 flex flex-col items-center justify-center text-slate-400 text-xs border-2 border-dashed border-slate-100 rounded-2xl bg-slate-50/50">
                                 <Target size={32} className="mb-2 opacity-50" />
-                                <p>Agrega un segundo peso para ver la evolución.</p>
+                                <p>Agrega un segundo peso para ver la evolução.</p>
                              </div>
                         ) : (
                             <div className="relative h-48 w-full select-none pr-10 pl-2">
@@ -667,56 +667,27 @@ export const ProductDetailView: React.FC<ProductDetailViewProps> = ({ product, o
               </div>
             </section>
 
-            {/* Tips & Variants Grid */}
-            <div className="grid grid-cols-1 gap-6">
-              {/* Tips */}
-              <section className="bg-amber-50/50 rounded-3xl p-6 border border-amber-100">
-                <h4 className="font-bold text-amber-800 mb-4 flex items-center gap-2">
-                  <Lightbulb size={18} />
-                  Tips del Chef
-                </h4>
-                <div className="space-y-3">
-                  {product.recipeDetails.tips.map((tip, i) => (
-                    <div key={i} className="flex gap-3 text-sm text-amber-900/70 bg-white/60 p-3 rounded-xl border border-amber-100/50">
-                      <div className="w-1.5 h-1.5 rounded-full bg-amber-400 mt-2 shrink-0" />
-                      <span>{tip}</span>
-                    </div>
-                  ))}
-                </div>
-              </section>
-
-              {/* Variants */}
-              <section className="bg-emerald-50/50 rounded-3xl p-6 border border-emerald-100">
-                <h4 className="font-bold text-emerald-800 mb-4 flex items-center gap-2">
-                  <Star size={18} />
-                  Variantes
-                </h4>
-                <div className="space-y-3">
-                  {product.recipeDetails.variants.map((variant, i) => (
-                    <div key={i} className="flex gap-3 text-sm text-emerald-900/70 bg-white/60 p-3 rounded-xl border border-emerald-100/50">
-                      <Zap size={14} className="mt-1 shrink-0 text-emerald-500" />
-                      <span>{variant}</span>
-                    </div>
-                  ))}
-                </div>
-              </section>
-            </div>
-
-            {/* Warnings */}
-            <section className="bg-red-50 rounded-3xl p-6 border border-red-100">
-              <h4 className="font-bold text-red-800 mb-4 flex items-center gap-2">
-                <AlertTriangle size={18} />
-                Atención
-              </h4>
-              <div className="space-y-3">
-                {product.recipeDetails.warnings.map((warning, i) => (
-                  <div key={i} className="flex gap-3 text-sm text-red-900/70 bg-white/60 p-3 rounded-xl border border-red-100/50">
-                    <Info size={14} className="mt-1 shrink-0 text-red-400" />
-                    <span>{warning}</span>
+            {/* Seção de Benefícios (Substituindo Tips/Variants/Warnings) */}
+            {product.recipeDetails.benefits && product.recipeDetails.benefits.length > 0 && (
+              <section className="bg-emerald-50/50 rounded-[2.5rem] p-8 border border-emerald-100 shadow-inner">
+                <h3 className="font-bold text-emerald-900 text-xl mb-6 flex items-center gap-2">
+                  <div className="p-2 bg-white rounded-xl text-emerald-600 shadow-sm">
+                    <Lightbulb size={20} />
                   </div>
-                ))}
-              </div>
-            </section>
+                  La Ciencia del Éxito
+                </h3>
+                <div className="space-y-4">
+                  {product.recipeDetails.benefits.map((benefit, i) => (
+                    <div key={i} className="flex gap-4 bg-white/80 p-4 rounded-2xl shadow-sm border border-emerald-50">
+                      <div className="w-2 h-2 rounded-full bg-emerald-400 mt-2 shrink-0" />
+                      <p className="text-slate-700 text-sm leading-relaxed font-medium">
+                        {benefit}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </section>
+            )}
           </div>
         ) : !isTracker && !isGuide && (
           /* --- STANDARD COURSE VIEW (LESSONS) --- */
