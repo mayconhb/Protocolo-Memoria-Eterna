@@ -221,14 +221,42 @@ export const BONUSES: Product[] = [
     isLocked: false,
     description: 'Entrenamiento cerebral mediante ondas gama para alcanzar niveles máximos de enfoque.',
     duration: 'Terapia Binaural',
+    videoSessions: [
+      {
+        id: 1,
+        title: "Corteza Prefrontal",
+        subtitle: "Enfoque y Concentración",
+        objective: "Activar la región responsable de la toma de decisiones y el enfoque mental",
+        brainPart: "Lóbulo Frontal",
+        duration: "8 min",
+        frequency: "Gamma",
+        videoUrl: "/memory_pulse_1.mp4"
+      },
+      {
+        id: 2,
+        title: "Hipocampo",
+        subtitle: "Memoria y Aprendizaje",
+        objective: "Fortalecer la formación de nuevas memorias y retención de información",
+        brainPart: "Región Temporal",
+        duration: "8 min",
+        frequency: "Gamma",
+        videoUrl: "/memory_pulse_2.mp4"
+      },
+      {
+        id: 3,
+        title: "Corteza Límbica",
+        subtitle: "Equilibrio Emocional",
+        objective: "Regular emociones y reducir estrés para una mente tranquila",
+        brainPart: "Sistema Límbico",
+        duration: "8 min",
+        frequency: "Gamma",
+        videoUrl: "/memory_pulse_3.mp4"
+      }
+    ],
     guideDetails: [
       {
         title: "Sesión de Reinicio Cerebral",
-        blocks: [
-          { type: 'video_session', title: "Memory Pulse", duration: "8 min", frequency: "Gamma", videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4" },
-          { type: 'text', content: "Audio de Frecuencias Gamma para reiniciar el cerebro y alcanzar niveles máximos de enfoque." },
-          { type: 'tip', title: "Instrucciones", content: "Busca un lugar tranquilo, usa auriculares y cierra los ojos para una inmersión total." }
-        ]
+        blocks: []
       }
     ]
   }
