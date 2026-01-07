@@ -10,7 +10,7 @@ export const PRODUCTS: Product[] = [
     id: 'p1',
     title: 'Protocolo Memoria Eterna',
     category: 'Receta',
-    image: '/attached_assets/generated_images/digital_human_brain_glowing_connections.png',
+    image: '/attached_assets/generated_images/cinematic_glowing_brain_neural_network.png',
     isLocked: false,
     description: 'Guía prática con la receita y el método de uso del tónico cerebral para potenciar tu memoria.',
     duration: 'Ritual diario',
