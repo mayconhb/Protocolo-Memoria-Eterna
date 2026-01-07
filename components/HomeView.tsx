@@ -113,10 +113,11 @@ export const HomeView: React.FC<HomeViewProps> = ({ onProductClick, onShowUpgrad
             className={`w-full overflow-x-auto snap-x snap-mandatory no-scrollbar px-6 flex gap-4 ${bannerScroll.isDragging ? 'cursor-grabbing snap-none' : 'cursor-grab'}`}
           >
             {banners.map((banner, index) => (
-              <div key={banner.id} className="snap-center shrink-0 w-full sm:w-[350px] relative rounded-3xl overflow-hidden aspect-[16/9] shadow-md select-none pointer-events-none sm:pointer-events-auto">
+              <div key={banner.id} className="snap-center shrink-0 w-full sm:w-[350px] relative rounded-3xl overflow-hidden aspect-[16/9] shadow-md select-none pointer-events-none sm:pointer-events-auto bg-slate-200">
                 <img 
                   src={banner.image} 
                   alt="Banner" 
+                  loading="eager"
                   className="w-full h-full object-cover pointer-events-none"
                 />
                 <div className="absolute inset-0 bg-black/30 flex items-end p-6">
@@ -156,7 +157,12 @@ export const HomeView: React.FC<HomeViewProps> = ({ onProductClick, onShowUpgrad
                 className="snap-center shrink-0 w-40 flex flex-col gap-2 group cursor-pointer select-none"
               >
                 <div className="aspect-square rounded-2xl overflow-hidden relative shadow-sm bg-white/60 backdrop-blur-sm">
-                  <img src={product.image} alt={product.title} className="w-full h-full object-cover group-active:scale-105 transition-transform duration-300 pointer-events-none" />
+                  <img 
+                    src={product.image} 
+                    alt={product.title} 
+                    loading="lazy"
+                    className="w-full h-full object-cover group-active:scale-105 transition-transform duration-300 pointer-events-none" 
+                  />
                 </div>
                 <div>
                   <h4 className="font-semibold text-slate-800 text-sm leading-tight">{product.title}</h4>
@@ -186,7 +192,12 @@ export const HomeView: React.FC<HomeViewProps> = ({ onProductClick, onShowUpgrad
                 className="snap-center shrink-0 w-40 flex flex-col gap-2 group cursor-pointer select-none"
               >
                 <div className="aspect-square rounded-2xl overflow-hidden relative shadow-sm bg-white/60 backdrop-blur-sm">
-                  <img src={product.image} alt={product.title} className="w-full h-full object-cover group-active:scale-105 transition-transform duration-300 pointer-events-none" />
+                  <img 
+                    src={product.image} 
+                    alt={product.title} 
+                    loading="lazy"
+                    className="w-full h-full object-cover group-active:scale-105 transition-transform duration-300 pointer-events-none" 
+                  />
                 </div>
                 <div>
                   <h4 className="font-semibold text-slate-800 text-sm leading-tight">{product.title}</h4>

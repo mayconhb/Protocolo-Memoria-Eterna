@@ -358,10 +358,11 @@ export const ProductDetailView: React.FC<ProductDetailViewProps> = ({ product, o
     <div className="absolute inset-0 z-50 bg-white overflow-y-auto animate-slide-in font-sans">
       
       {/* Header Image & Nav */}
-      <div className="relative h-[320px] w-full group">
+      <div className="relative h-[320px] w-full group bg-slate-200">
         <img 
             src={product.image} 
             alt={product.title} 
+            loading="eager"
             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
         />
         {/* Dark Overlay for Text Contrast */}
