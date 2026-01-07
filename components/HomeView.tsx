@@ -3,8 +3,8 @@ import { Lock, ChevronRight } from 'lucide-react';
 import { PRODUCTS, BONUSES, LOCKED_CONTENT, MOTIVATIONAL_QUOTES } from '../constants';
 import { Product } from '../types';
 
-import bannerMemoria1 from '@assets/stock_images/brain_memory_health__9a9c5781.jpg';
-import bannerMemoria2 from '@assets/stock_images/brain_memory_health__0fd4f5d7.jpg';
+import bannerMemoria1 from '@assets/stock_images/abstract_glowing_bra_088b2437.jpg';
+import bannerMemoria2 from '@assets/stock_images/meditation_mindfulne_ef6a38bc.jpg';
 
 interface HomeViewProps {
   onProductClick: (product: Product) => void;
