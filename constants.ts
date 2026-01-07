@@ -199,7 +199,7 @@ export const BONUSES: Product[] = [
     id: 'b2',
     title: '101 Curas Herbales',
     category: 'Farmacia Natural',
-    image: 'attached_assets/stock_images/herbal_tea_collectio_de2b3588.jpg',
+    image: '/curas_herbales_cover.png',
     isLocked: false,
     description: 'La enciclopedia definitiva de remedios ancestrales para recuperar tu salud sin químicos.',
     duration: 'Enciclopedia Digital',
