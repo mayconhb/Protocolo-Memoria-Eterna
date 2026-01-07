@@ -154,7 +154,7 @@ export const BONUSES: Product[] = [
     id: 'b1',
     title: 'El Código del Superintestino',
     category: 'Salud Intestinal',
-    image: 'attached_assets/stock_images/human_digestive_syst_c698a4b3.jpg',
+    image: '/codigo_super_intestino.png',
     isLocked: false,
     description: 'Protocolo maestro para restaurar tu microbiota y eliminar la inflamación sistémica.',
     duration: 'Guía Avanzada',
