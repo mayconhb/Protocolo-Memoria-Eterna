@@ -10,7 +10,7 @@ export const PRODUCTS: Product[] = [
     id: 'p1',
     title: 'Protocolo Memoria Eterna',
     category: 'Receta',
-    image: '/gelatina-reductora.png',
+    image: '/attached_assets/stock_images/conceptual_brain_mem_c1dd83ec.jpg',
     isLocked: false,
     description: 'Guía prática con la receita y el método de uso del tónico cerebral para potenciar tu memoria.',
     duration: 'Ritual diario',
