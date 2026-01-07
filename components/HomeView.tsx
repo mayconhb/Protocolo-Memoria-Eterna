@@ -3,7 +3,7 @@ import { Lock, ChevronRight } from 'lucide-react';
 import { PRODUCTS, BONUSES, LOCKED_CONTENT, MOTIVATIONAL_QUOTES } from '../constants';
 import { Product } from '../types';
 
-import bannerMemoria1 from '@assets/stock_images/senior_woman_smiling_d8392ac0.jpg';
+import bannerMemoria1 from '@assets/stock_images/elderly_couple_head__ba7e0c30.jpg';
 import bannerMemoria2 from '@assets/stock_images/meditation_mindfulne_ef6a38bc.jpg';
 
 interface HomeViewProps {
