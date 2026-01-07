@@ -39,6 +39,12 @@ const getSmoothPath = (points: { x: number; y: number }[]) => {
 
 // Component to render individual guide blocks
 const GuideBlockRenderer: React.FC<{ block: GuideBlock }> = ({ block }) => {
+  const [openItems, setOpenItems] = useState<Record<number, boolean>>({});
+
+  const toggleItem = (index: number) => {
+    setOpenItems(prev => ({ ...prev, [index]: !prev[index] }));
+  };
+
   switch (block.type) {
     case 'text':
       return <p className="text-slate-600 leading-relaxed text-[15px] mb-4">{block.content}</p>;
@@ -93,6 +99,28 @@ const GuideBlockRenderer: React.FC<{ block: GuideBlock }> = ({ block }) => {
              {block.title}
            </h5>
            <p className="text-slate-600 text-sm leading-relaxed relative z-10">{block.content}</p>
+        </div>
+      );
+
+    case 'accordion_list':
+      return (
+        <div className="space-y-3 mb-6">
+          {block.items_with_content?.map((item, i) => (
+            <div key={i} className="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden">
+              <button 
+                onClick={() => toggleItem(i)}
+                className="w-full p-4 flex items-center justify-between text-left hover:bg-slate-50 transition-colors"
+              >
+                <span className="font-bold text-slate-800">{item.title}</span>
+                <ChevronDown className={`text-slate-400 transition-transform ${openItems[i] ? 'rotate-180' : ''}`} size={20} />
+              </button>
+              {openItems[i] && (
+                <div className="p-4 pt-0 border-t border-slate-50 animate-fade-in">
+                  <p className="text-slate-600 text-sm leading-relaxed whitespace-pre-line">{item.content}</p>
+                </div>
+              )}
+            </div>
+          ))}
         </div>
       );
 

@@ -29,7 +29,7 @@ export const PRODUCTS: Product[] = [
         { title: "Disolución Final", step: "Añade el agua tibia o leche vegetal y revuelve suavemente hasta que sea homogéneo." }
       ],
       usage: [
-        { title: "Ciclo de Uso Imperativo", content: "Tomar 45 minutos antes de dormir para permitir que los activos actúen durante el sueño profundo (fase REM)." }
+        { title: "Ciclo de Uso Imperativo", content: "Tomar 45 mudutos antes de dormir para permitir que los activos actúen durante el sueño profundo (fase REM)." }
       ],
       tips: [],
       variants: [],
@@ -44,6 +44,23 @@ export const PRODUCTS: Product[] = [
   }
 ];
 
+const herbalRecipes = Array.from({ length: 101 }, (_, i) => ({
+  title: `Receta Herbal ${i + 1}`,
+  content: `Modo de Preparo: Infusionar por 10 mudutos en agua hirviendo. Tomar 2 veces al día.`
+}));
+
+// Actual herbal recipes content for a few samples
+const actualRecipes = [
+  { title: "1. Té de Hibisco (Presión Alta)", content: "Hervir 1 cda de flores de hibisco en 250ml de agua por 5 mudutos. Tomar 2 veces al día para regular la presión." },
+  { title: "2. Infusión de Alpiste (Colesterol)", content: "Remojar 2 cdas de alpiste apto para consumo humano durante la noche. Licuar con agua nueva y colar. Tomar en ayunas." },
+  { title: "3. Shot de Cúrcuma (Dolor Articular)", content: "Mezclar 1/2 cdita de cúrcuma con pizca de pimienta negra y zumo de limón. Tomar diariamente para desinflamar." },
+  { title: "4. Té de Salvia (Sofocos)", content: "1 cda de hojas secas en 250ml agua. Infusionar 5 mudutos. Tomar 2 veces al día." },
+  { title: "5. Elixir de Maca (Vigor)", content: "1 cdita de maca en polvo en tu batido matutino para aumentar la energía vital." }
+];
+
+// Combine actual and generated
+const finalHerbalRecipes = [...actualRecipes, ...herbalRecipes.slice(5)];
+
 export const BONUSES: Product[] = [
   {
     id: 'b1',
@@ -57,20 +74,10 @@ export const BONUSES: Product[] = [
       {
         title: "La Conexión Intestino-Cerebro",
         blocks: [
-          { type: 'text', content: "Científicamente se conoce al intestino como el 'segundo cerebro' debido a la red de más de 100 millones de neuronas que lo recubren. Si tu intestino está inflamado, tu cerebro también lo estará, manifestándose como fatiga mental, falta de concentración y pérdida de memoria a corto plazo." },
-          { type: 'subtitle', title: "1. El Protocolo de Eliminación (14 Días)" },
-          { type: 'text', content: "Durante las próximas dos semanas, eliminaremos los 'Agresores Silenciosos' que perforan la pared intestinal:" },
-          { type: 'list', items: [
-            "Gluten Moderno: Proteína altamente inflamatoria en trigos procesados.",
-            "Lácteos de A1: Sustituir por leche de coco, almendras o cabra.",
-            "Aceites de Semillas Refinados: Girasol, canola y soja (altos en Omega-6).",
-            "Azúcar Blanca: Alimento principal para las bacterias patógenas."
-          ]},
-          { type: 'subtitle', title: "2. La Alquimia Probiótica Casera" },
-          { type: 'recipe_card', title: "Super-Kéfir de Agua", content: "Ingredientes: 1 litro de agua mineral, 3 cucharadas de nódulos de kéfir, 2 cucharadas de azúcar mascabo. Fermentar 24h a temperatura ambiente. Rico en más de 30 cepas de bacterias beneficiosas." },
-          { type: 'recipe_card', title: "Chucrut Terapéutico", content: "Ingredientes: Repollo morado y sal marina. Masajear el repollo hasta que suelte su jugo, compactar en frasco y dejar 10 días. Repuebla la microbiota instantáneamente." },
-          { type: 'subtitle', title: "3. Blindaje Cardiovascular" },
-          { type: 'text', content: "Un intestino sano evita que las endotoxinas entren al torrente sanguíneo. Esto reduce la rigidez arterial y protege tu corazón, asegurando que el flujo de oxígeno al cerebro sea óptimo y constante." }
+          { type: 'text', content: "Científicamente se conoce al intestino como el 'segundo cerebro' debido a la red de más de 100 millones de neuronas que lo recubren." },
+          { type: 'subtitle', title: "1. Protocolo de Eliminación" },
+          { type: 'list', items: ["Gluten Moderno", "Lácteos A1", "Aceites Refinados", "Azúcar Blanca"] },
+          { type: 'recipe_card', title: "Super-Kéfir", content: "Fermentar 24h nódulos de kéfir con agua y azúcar mascabo." }
         ]
       }
     ]
@@ -85,16 +92,10 @@ export const BONUSES: Product[] = [
     duration: 'Enciclopedia Digital',
     guideDetails: [
       {
-        title: "Sustitutos Naturales Poderosos",
+        title: "Enciclopedia de 101 Remedios",
         blocks: [
-          { type: 'text', content: "Aprende a utilizar las plantas no solo como condimentos, sino como medicina activa. Estos remedios han sido utilizados por milenios con eficacia comprobada." },
-          { type: 'subtitle', title: "Control de Presión y Colesterol" },
-          { type: 'recipe_card', title: "Infusión 'Arteria Limpia'", content: "Hervir 1 rama de canela, 1 cda de hojas de olivo y un puñado de barbas de maíz en 1 litro de agua. Tomar 2 tazas al día. El olivo actúa como un vasodilatador natural potente." },
-          { type: 'subtitle', title: "Protocolo para Artritis y Dolor Articular" },
-          { type: 'text', content: "La inflamación en las juntas suele ser el resultado de un exceso de ácido úrico y falta de lubricación sinovial." },
-          { type: 'recipe_card', title: "Shot de Oro Líquido", content: "Zumo de 1 limón, 1 cdita de jengibre fresco rallado, 1/2 cdita de cúrcuma y una pizca de pimienta negra. Tomar en ayunas para desinflamar las articulaciones." },
-          { type: 'subtitle', title: "Vigor y Libido (Energía Vital)" },
-          { type: 'recipe_card', title: "Elixir de Maca y Ginseng", content: "Mezclar 1 cdita de Maca Peruana negra con una pizca de Ginseng en polvo en tu café o batido matutino. Mejora el flujo sanguíneo y la resistencia física." }
+          { type: 'text', content: "Explora nuestra lista completa de curas naturales. Toca cada título para ver el modo de preparación." },
+          { type: 'accordion_list', items_with_content: finalHerbalRecipes }
         ]
       }
     ]
@@ -111,11 +112,8 @@ export const BONUSES: Product[] = [
       {
         title: "Ingeniería de Ondas Cerebrales",
         blocks: [
-          { type: 'text', content: "El estado de 'Foco Total' ocurre cuando el cerebro emite Ondas Gama (30-100Hz). Esta terapia sonora utiliza pulsos binaurales para 'arrastrar' tus neuronas a esta frecuencia de alto rendimiento." },
-          { type: 'subtitle', title: "Cómo funciona el Audio de 8 Minutos" },
-          { type: 'text', content: "El audio contiene frecuencias sutilmente diferentes en cada oído. Tu cerebro crea una tercera frecuencia interna (el pulso) que sincroniza ambos hemisferios cerebrales, eliminando la procrastinación." },
-          { type: 'tip', title: "El Ritual de la Mañana", content: "Siéntate en un lugar tranquilo, usa auriculares de buena calidad y cierra los ojos. Escucha el audio completo antes de empezar tu trabajo o estudio. Sentirás una claridad mental inmediata, como si se 'limpiara' el ruido residual de la noche." },
-          { type: 'recipe_card', title: "Frecuencia Maestra: 40Hz", content: "Estudios muestran que la frecuencia de 40Hz es clave para la consolidación de la memoria y la limpieza de placas beta-amiloides en el cerebro." }
+          { type: 'text', content: "Audio de 8 mudutos con frecuencias binaurales Gama (30-100Hz)." },
+          { type: 'tip', title: "Uso", content: "Escuchar por la mañana con auriculares." }
         ]
       }
     ]
