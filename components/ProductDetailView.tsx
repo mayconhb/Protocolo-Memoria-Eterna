@@ -102,32 +102,10 @@ const VideoSession: React.FC<{ block: GuideBlock }> = ({ block }) => {
         • Audioterapia
       </div>
 
-      {/* Title and Info */}
-      <h3 className="text-3xl font-bold text-slate-900 mb-2">{block.title}</h3>
-      <p className="text-slate-500 text-sm mb-10">{block.content}</p>
-
-      {/* Stat Cards */}
-      <div className="grid grid-cols-2 gap-4 w-full max-w-sm mb-10">
-        <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex flex-col items-center text-center">
-          <div className="w-10 h-10 bg-indigo-50 rounded-2xl flex items-center justify-center text-indigo-600 mb-3">
-            <Clock size={20} />
-          </div>
-          <span className="text-xl font-bold text-slate-900">{block.duration}</span>
-          <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1">Duración</span>
-        </div>
-        <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex flex-col items-center text-center">
-          <div className="w-10 h-10 bg-indigo-50 rounded-2xl flex items-center justify-center text-indigo-600 mb-3">
-            <Zap size={20} />
-          </div>
-          <span className="text-xl font-bold text-slate-900">{block.frequency}</span>
-          <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1">Frecuencia</span>
-        </div>
-      </div>
-
-      {/* Action Button */}
+      {/* Action Button moved here */}
       <button 
         onClick={handleTogglePlay}
-        className={`w-full max-w-sm py-5 rounded-full font-bold text-lg shadow-xl active:scale-95 transition-all flex items-center justify-center gap-3 ${isPlaying ? 'bg-slate-900 text-white shadow-slate-200' : 'bg-indigo-600 text-white shadow-indigo-200'}`}
+        className={`w-full max-w-sm py-5 rounded-full font-bold text-lg shadow-xl active:scale-95 transition-all flex items-center justify-center gap-3 mb-10 ${isPlaying ? 'bg-slate-900 text-white shadow-slate-200' : 'bg-indigo-600 text-white shadow-indigo-200'}`}
       >
         <div className="bg-white/20 p-1.5 rounded-full">
           {isPlaying ? (
@@ -141,6 +119,24 @@ const VideoSession: React.FC<{ block: GuideBlock }> = ({ block }) => {
         </div>
         {isPlaying ? 'Pausar Sesión' : 'Comenzar Sesión'}
       </button>
+
+      {/* Stat Cards */}
+      <div className="grid grid-cols-2 gap-4 w-full max-w-sm">
+        <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex flex-col items-center text-center">
+          <div className="w-10 h-10 bg-indigo-50 rounded-2xl flex items-center justify-center text-indigo-600 mb-3">
+            <Clock size={20} />
+          </div>
+          <span className="text-xl font-bold text-slate-900 tracking-tight">{block.duration}</span>
+          <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1">Duración</span>
+        </div>
+        <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex flex-col items-center text-center">
+          <div className="w-10 h-10 bg-indigo-50 rounded-2xl flex items-center justify-center text-indigo-600 mb-3">
+            <Zap size={20} />
+          </div>
+          <span className="text-xl font-bold text-slate-900 tracking-tight">{block.frequency}</span>
+          <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1">Frecuencia</span>
+        </div>
+      </div>
     </div>
   );
 };
