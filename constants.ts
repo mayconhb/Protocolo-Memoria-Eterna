@@ -146,16 +146,9 @@ const actualRecipes = [
   { title: "98. Agua de Coco con Cúrcuma (Post-Entreno)", content: "Ingredientes: 250ml agua coco, 1/4 cdita cúrcuma, pizca sal.\nModo de Preparo: Mezclar bien para recuperar electrolitos y reducir inflamación muscular." },
   { title: "99. Té de Malvavisco (Reflujo)", content: "Ingredientes: 1 cda de raíz de malvavisco, 250ml agua fría.\nModo de Preparo: Macerar la raíz en agua fría 4 horas. Beber para proteger el esófago." },
   { title: "100. Infusión de Pétalos de Rosa (Piel)", content: "Ingredientes: 1 puñado de pétalos orgánicos, 250ml de agua.\nModo de Preparo: Infusionar 5 minutos. Rico en vitamina C y antioxidantes para el cutis." },
-  { title: "101. Elixir de Ajo y Limón (Limpieza Arterial)", content: "Ingredientes: 1 diente de ajo machacado, zumo de 1 limón, 1 vaso agua.\nModo de Preparo: Mezclar y tomar en ayunas para reducir placa arterial y mejorar circulación." };
+{ title: "101. Elixir de Ajo y Limón (Limpieza Arterial)", content: "Ingredientes: 1 diente de ajo machacado, zumo de 1 limón, 1 vaso agua.\nModo de Preparo: Mezclar y tomar en ayunas para reducir placa arterial y mejorar circulación." }
 ];
-
-// Combine actual recipes
 const finalHerbalRecipes = actualRecipes;
-];
-
-// Combine actual recipes
-const finalHerbalRecipes = actualRecipes;
-
 export const BONUSES: Product[] = [
   {
     id: 'b1',
