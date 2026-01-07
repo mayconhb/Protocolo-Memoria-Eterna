@@ -17,12 +17,15 @@ export interface ProtocolDay {
 }
 
 export interface GuideBlock {
-  type: 'text' | 'list' | 'tip' | 'warning' | 'subtitle' | 'recipe_card' | 'accordion_list';
+  type: 'text' | 'list' | 'tip' | 'warning' | 'subtitle' | 'recipe_card' | 'accordion_list' | 'video_session';
   content?: string;
   items?: string[];
   items_with_content?: { title: string; content: string }[];
   title?: string;
   emoji?: string;
+  duration?: string;
+  frequency?: string;
+  videoUrl?: string;
 }
 
 export interface GuideSection {

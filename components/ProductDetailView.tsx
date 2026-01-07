@@ -102,6 +102,63 @@ const GuideBlockRenderer: React.FC<{ block: GuideBlock }> = ({ block }) => {
         </div>
       );
 
+    case 'video_session':
+      return (
+        <div className="flex flex-col items-center mb-8 animate-fade-in">
+          {/* Circular Video Container */}
+          <div className="relative w-64 h-64 sm:w-72 sm:h-72 mb-8 group">
+            <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500 animate-pulse-slow blur-xl opacity-20 group-hover:opacity-40 transition-opacity"></div>
+            <div className="relative w-full h-full rounded-full border-4 border-slate-100/50 p-2 bg-white shadow-2xl overflow-hidden z-10">
+              <div className="w-full h-full rounded-full overflow-hidden bg-slate-900 flex items-center justify-center">
+                <video 
+                  src={block.videoUrl} 
+                  className="w-full h-full object-cover"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Badge */}
+          <div className="px-4 py-1.5 bg-indigo-50 text-indigo-600 text-[10px] font-bold uppercase tracking-[0.2em] rounded-full mb-6 border border-indigo-100/50">
+            • Audioterapia
+          </div>
+
+          {/* Title and Info */}
+          <h3 className="text-3xl font-bold text-slate-900 mb-2">{block.title}</h3>
+          <p className="text-slate-500 text-sm mb-10">{block.content}</p>
+
+          {/* Stat Cards */}
+          <div className="grid grid-cols-2 gap-4 w-full max-w-sm mb-10">
+            <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex flex-col items-center text-center">
+              <div className="w-10 h-10 bg-indigo-50 rounded-2xl flex items-center justify-center text-indigo-600 mb-3">
+                <Clock size={20} />
+              </div>
+              <span className="text-xl font-bold text-slate-900">{block.duration}</span>
+              <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1">Duración</span>
+            </div>
+            <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex flex-col items-center text-center">
+              <div className="w-10 h-10 bg-indigo-50 rounded-2xl flex items-center justify-center text-indigo-600 mb-3">
+                <Zap size={20} />
+              </div>
+              <span className="text-xl font-bold text-slate-900">{block.frequency}</span>
+              <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1">Frecuencia</span>
+            </div>
+          </div>
+
+          {/* Action Button */}
+          <button className="w-full max-w-sm py-5 bg-indigo-600 text-white rounded-full font-bold text-lg shadow-xl shadow-indigo-200 active:scale-95 transition-all flex items-center justify-center gap-3">
+            <div className="bg-white/20 p-1.5 rounded-full">
+              <PlayCircle size={22} fill="white" className="text-indigo-600" />
+            </div>
+            Comenzar Sesión
+          </button>
+        </div>
+      );
+
     case 'accordion_list':
       return (
         <div className="space-y-3 mb-6">

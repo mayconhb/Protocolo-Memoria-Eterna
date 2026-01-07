@@ -223,10 +223,11 @@ export const BONUSES: Product[] = [
     duration: 'Terapia Binaural',
     guideDetails: [
       {
-        title: "Ingeniería de Ondas Cerebrales",
+        title: "Sesión de Reinicio Cerebral",
         blocks: [
-          { type: 'text', content: "Audio de 8 mudutos con frecuencias binaurales Gama (30-100Hz)." },
-          { type: 'tip', title: "Uso", content: "Escuchar por la mañana con auriculares." }
+          { type: 'video_session', title: "Memory Pulse", duration: "8 min", frequency: "Gamma", videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4" },
+          { type: 'text', content: "Audio de Frecuencias Gamma para reiniciar el cerebro y alcanzar niveles máximos de enfoque." },
+          { type: 'tip', title: "Instrucciones", content: "Busca un lugar tranquilo, usa auriculares y cierra los ojos para una inmersión total." }
         ]
       }
     ]
